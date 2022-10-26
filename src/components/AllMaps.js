@@ -3,6 +3,7 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet"
 import 'leaflet/dist/leaflet.css'
 import L from "leaflet";
 import { usePosts } from '../custom-hooks/'
+import { NavLink } from "react-router-dom";
 
 const markerIcon = new L.Icon({
     iconUrl: '/marker.png',
@@ -18,8 +19,8 @@ const AllMaps = ({ style, setInput, input }) => {
     return (
         <div className="maps">
             <MapContainer
-                center={[-7.9023242, 110.257544]}
-                zoom={9}
+                center={[-5.397487033029457, 105.25749477039165]}
+                zoom={11}
                 style={style}
                 scrollWheelZoom={false}>                
                 <TileLayer
@@ -27,25 +28,27 @@ const AllMaps = ({ style, setInput, input }) => {
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
 
-                {posts.filter((val)=>{
+                {posts.filter((post)=>{
                       if (setInput === "") {
-                        return val
-                    } else if (val.fields.name.toLowerCase().includes(input.toLowerCase())) {
-                        return val
+                        return post
+                    } else if (post.fields.name.toLowerCase().includes(input.toLowerCase())) {
+                        return post
                     }
-                }).map((val) => {
-                    let lat = val.fields.location.lat
-                    let lon = val.fields.location.lon
+                }).map((post) => {
+                    let lat = post.fields.location.lat
+                    let lon = post.fields.location.lon
                     return (
                         <div>
                             <Marker position={[lat, lon]} icon={markerIcon}>
                                 <Popup>
-                                    <p>{val.fields.name}</p>
-                                    <a href={val.fields.maps}>Lihat Rute di Google Map</a>
+                                    <h3>
+                                        <NavLink to={`/wisata/${post.fields.slug}`}>{post.fields.name}</NavLink>
+                                    </h3>
+                                    <img width={80} src={post.fields.image.fields.file.url} alt={post.fields.name} />
+                                    <p><a href={post.fields.maps}>Telusuri Rute melalui Google Maps</a></p>
                                 </Popup>
                             </Marker>
                         </div>
-
                     )
                 })}
             </MapContainer>

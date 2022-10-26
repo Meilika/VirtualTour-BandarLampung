@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Hero from "../components/Hero";
 import { usePosts } from "../custom-hooks";
 import TextTruncate from 'react-text-truncate';
-import "./Home.css";
+import "./ListWisata.css";
 
 const Home = () => {
     const [posts, isLoading] = usePosts();
@@ -49,14 +49,14 @@ const Home = () => {
             <h1 className="wisata-title">Explore Wisata </h1>
             <div className="wisata">
                 {posts.filter((post) => {
-                    if (setInput == "") {
-                        return post
+                    if (setInput === "") {
+                        return post;
                     } else if (post.fields.name.toLowerCase().includes(input.toLowerCase())) {
-                        return post
+                        return post;
                     }
                 }).map((post) => {
                     return (
-                        <div className="list-wisata">
+                        <div className="list-wisata" key={post.fields.id}>
                             <img className="wisata-pic" src={post.fields.image.fields.file.url} alt={post.fields.name} />
                             {/* <iframe className="wisata-pic" src={post.fields.vr} title="description"></iframe>  */}
                             <div className="list-desc">
@@ -72,7 +72,7 @@ const Home = () => {
                                     />
                                 </p>
                                 <div className="wisata-button__container">
-                                    <Link key={post.fields.slug} to={post.fields.slug}>
+                                    <Link to={`/wisata/${post.fields.slug}`}>
                                         <button className="wisata-button"><span>Lihat Detail</span></button>
                                     </Link>
                                 </div>

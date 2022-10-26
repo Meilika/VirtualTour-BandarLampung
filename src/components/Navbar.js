@@ -18,13 +18,13 @@ const Navbar = () => {
                 </div>
                 <ul className="navbar__lists nav-hidden">
                     <Link to="/">
-                        <li>Home</li>
+                        <li>Beranda</li>
                     </Link>
                     <Link to="/wisata">
                         <li>Wisata</li>
                     </Link>
                     <Link to="/Maps">
-                        <li>Maps</li>
+                        <li>Peta</li>
                     </Link>
                 </ul>
                 <div className="navbar-mobile">

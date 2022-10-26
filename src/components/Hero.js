@@ -3,7 +3,7 @@ import "./Hero.css"
 import SearchBar from "./SearchBar";
 
 const HeroListWisata = ({ handleChange, handleClick, handleKey }) => {
-    const border = { border: 'none' }
+    const border = { borderColor: 'white' }
     return (
         <div className="hero-content">
             <div className="hero-wisata">

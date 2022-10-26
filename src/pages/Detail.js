@@ -39,7 +39,10 @@ const Detail = () => {
                     <p>{post.description}</p>
                 </div>
             </div>
-            <iframe src={post.vr} alt={post.name}></iframe>
+            <div className="content__vr">
+                <h2 className="vr__name"><a href={post.vr} target="_blank" alt={post.name}>Virtual Tour</a></h2>
+                <iframe src={post.vr} alt={post.name} />
+            </div>
             <div className="detail__map">
                 <h2 className="map__title">Location</h2>
                 <div className="map__location">

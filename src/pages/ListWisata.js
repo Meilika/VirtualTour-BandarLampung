@@ -30,12 +30,12 @@ const ListWisata = () => {
                 {posts.filter((post) => {
                     if (filter === "") {
                         return post
-                    } else if (post.fields.name === filter) {
+                    } else if (post.fields.category === filter) {
                         return post
                     } 
                 }).map((post) => {
                     return (
-                        <div className="list-wisata">
+                        <div className="list-wisata" key={post.fields.id} >
                             <img className="wisata-pic" src={post.fields.image.fields.file.url} alt={post.fields.name} />
                             {/* <iframe className="wisata-pic" src={post.fields.vr} title="description"></iframe>  */}
                             <div className="list-desc">
@@ -51,7 +51,7 @@ const ListWisata = () => {
                                     />
                                 </p>
                                 <div className="wisata-button__container">
-                                    <Link key={post.fields.slug} to={post.fields.slug}>
+                                    <Link to={post.fields.slug}>
                                         <button className="wisata-button"><span>Lihat Detail</span></button>
                                     </Link>
                                 </div>

@@ -28,6 +28,7 @@
 
 .content__description{
     flex: 0.4;
+    text-align:justify;
 }
 
 .content__description p{    
@@ -41,6 +42,20 @@
 .content__description h2{
     margin-bottom: 10px;
     margin-top: 0;
+}
+
+.vr__name a {
+    text-decoration: none;
+    color: #005A8D;
+}
+
+.vr__name a:hover {
+    text-decoration: underline;
+}
+
+.content__vr iframe {
+    height: 500px;
+    width: 80%;
 }
 
 .detail__map{

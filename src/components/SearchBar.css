@@ -8,9 +8,9 @@
 
 .searchTerm {
     width: 100%;
-    height: 100%;
+    height: 33px;
     border: 3px solid #005A8D;
-    padding: 12px;
+    padding-left: 12px;
     border-radius: 5px 0 0 5px;
     outline: none;
     box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);

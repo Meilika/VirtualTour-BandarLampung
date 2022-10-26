@@ -14,8 +14,8 @@ function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/wisata" element={<ListWisata />} />
-      <Route path="/maps" element={<Location />} />
-      <Route path="/:slug" element={<Detail />} />
+      <Route path="/peta" element={<Location />} />
+      <Route path="wisata/:slug" element={<Detail />} />
     </Routes>
     <Footer/>
     </div>
