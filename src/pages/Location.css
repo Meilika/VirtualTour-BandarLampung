@@ -1,0 +1,21 @@
+.location{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.location__searchbar{
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: auto;
+    display: block;
+    justify-content: center;
+}
+
+.maps{
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
