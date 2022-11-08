@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
 
-import { getSinglePost } from '../contentful'
+import { getDetail } from '../contentful'
 
-export default function useSinglePost(slug) {
-  const promise = getSinglePost(slug)
+export default function useDetail(slug) {
+  const promise = getDetail(slug)
 
   const [post, setPost] = useState(null)
   const [isLoading, setLoading] = useState(true)

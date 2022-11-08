@@ -1,4 +1,4 @@
-import usePosts from './usePosts'
-import useSinglePost from './useSinglePost'
+import useWisata from './useWisata'
+import useDetail from './useDetail'
 
-export { usePosts, useSinglePost }
+export { useWisata, useDetail }

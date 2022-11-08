@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { usePosts } from "../custom-hooks";
+import { useWisata } from "../custom-hooks";
 import TextTruncate from 'react-text-truncate';
 import "./ListWisata.css";
 import KategoriButton from "../components/KategoriButton";
 
 const ListWisata = () => {
-    const [posts, isLoading ] = usePosts();
+    const [posts, isLoading ] = useWisata();
     const [filter, setFilter] = useState("");
 
     if (isLoading) return (

@@ -2,7 +2,7 @@ import React from 'react'
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet"
 import 'leaflet/dist/leaflet.css'
 import L from "leaflet";
-import { usePosts } from '../custom-hooks/'
+import { useWisata } from '../custom-hooks/'
 import { NavLink } from "react-router-dom";
 
 const markerIcon = new L.Icon({
@@ -13,7 +13,7 @@ const markerIcon = new L.Icon({
 
 const AllMaps = ({ style, setInput, input }) => {
 
-    const [posts, isLoading] = usePosts()
+    const [posts, isLoading] = useWisata()
 
     if (isLoading) return <p>Loading...</p>
     return (

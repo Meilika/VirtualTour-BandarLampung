@@ -1,17 +1,17 @@
-import { getBlogPosts } from '../contentful'
+import { getWisata } from '../contentful'
 import { useEffect, useState } from 'react'
 
-const promise = getBlogPosts()
+const promise = getWisata()
 
-export default function usePosts() {
+export default function useWisata() {
   const [posts, setPosts] = useState([])
   const [isLoading, setLoading] = useState(true)
 
   useEffect(() => {
-    promise.then(blogPosts => {
-      setPosts(blogPosts)
+    promise.then(wisata => {
+      setPosts(wisata)
       setLoading(false)
-      console.log(blogPosts)
+      console.log(wisata)
     })
   }, [])
 

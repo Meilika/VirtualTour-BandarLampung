@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Hero from "../components/Hero";
-import { usePosts } from "../custom-hooks";
+import { useWisata } from "../custom-hooks";
 import TextTruncate from 'react-text-truncate';
 import "./ListWisata.css";
 
 const Home = () => {
-    const [posts, isLoading] = usePosts();
+    const [posts, isLoading] = useWisata();
     const [input, setInput] = useState("")
     const [click, setClick] = useState("")
 

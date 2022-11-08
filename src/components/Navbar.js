@@ -23,7 +23,7 @@ const Navbar = () => {
                     <Link to="/wisata">
                         <li>Wisata</li>
                     </Link>
-                    <Link to="/Maps">
+                    <Link to="/peta">
                         <li>Peta</li>
                     </Link>
                 </ul>
@@ -42,8 +42,8 @@ const Navbar = () => {
                         <Link to="/wisata" onClick={toggle} >
                             <li>Wisata</li>
                         </Link>
-                        <Link to="/Maps" onClick={toggle}>
-                            <li>Maps</li>
+                        <Link to="/peta" onClick={toggle}>
+                            <li>Peta</li>
                         </Link>
                     </ul>
                 </div>

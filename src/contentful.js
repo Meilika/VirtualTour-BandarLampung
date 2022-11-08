@@ -3,9 +3,9 @@ const client = require('contentful').createClient({
     accessToken: 'cFYOa041mQACu2WeoR9jEYfv2_26S7kJ5Iw4JGCPetA'
   })
   
-  const getBlogPosts = () => client.getEntries().then(response => response.items)
+  const getWisata = () => client.getEntries().then(response => response.items)
   
-  const getSinglePost = slug =>
+  const getDetail = slug =>
     client
       .getEntries({
         'fields.slug': slug,
@@ -15,4 +15,4 @@ const client = require('contentful').createClient({
   
   
   
-  export { getBlogPosts, getSinglePost }
+  export { getWisata, getDetail }
