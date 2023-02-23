@@ -4,7 +4,7 @@ import './Footer.css';
 const Footer = () => {
     return (
         <div className="footer">
-            <p>Copyright © 2022. VirtualTour-BandarLampung</p>
+            <p>Copyright © 2023. VirtualTour-BandarLampung</p>
         </div>
     )
 }

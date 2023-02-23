@@ -110,7 +110,7 @@
     }    
 
     .content__image{
-        flex: unset;
+        height: 150px;
     }
 
     .content__description{
@@ -120,14 +120,14 @@
 
 @media screen and (max-width: 425px){
     .detail__title{
-        font-size: 1.4rem;
+        font-size: 30px;
     }
     
     .content__description h2, .map__title{
-        font-size: 1rem;
+        font-size: 20px;
     }
     
     .content__description p{
-        font-size: 0.8rem;
+        font-size: 14px;
     }
 }
