@@ -7,14 +7,16 @@ export default function useDetail(slug) {
 
   const [post, setPost] = useState(null)
   const [isLoading, setLoading] = useState(true)
+  const [vr, setVr] = useState(null)
 
   useEffect(() => {
     promise.then(result => {
       setPost(result[0].fields)
       setLoading(false)
       console.log(result[0].fields)
+      setVr(result[0].fields.vr)
     })
   }, [])
 
-  return [post, isLoading]
+  return [post, isLoading, vr]
 }

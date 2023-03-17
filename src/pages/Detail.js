@@ -6,7 +6,7 @@ import './Detail.css'
 
 const Detail = () => {
     const { slug } = useParams();
-    const [post, isLoading] = useDetail(slug)
+    const [post, isLoading, vr] = useDetail(slug)
     const style = { height: '400px', width: '100%' }
 
     if(isLoading) return (
@@ -39,10 +39,12 @@ const Detail = () => {
                     <p>{post.description}</p>
                 </div>
             </div>
-            <div className="content__vr">
-                <h2 className="vr__name"><a href={post.vr} target="_blank" alt={post.name}>Virtual Tour</a></h2>
-                <iframe src={post.vr} alt={post.name} />
-            </div>
+           {vr !== undefined ?(
+                <div className="content__vr">
+                    <h2 className="vr__name"><a href={post.vr} target="_blank" alt={post.name}>Virtual Tour</a></h2>
+                    <iframe src={post.vr} alt={post.name} />
+                </div>
+            ):null}
             <div className="detail__map">
                 <h2 className="map__title">Location</h2>
                 <div className="map__location">
