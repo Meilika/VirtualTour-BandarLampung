@@ -20,7 +20,7 @@ const AllMaps = ({ style, setInput, input }) => {
         <div className="maps">
             <MapContainer
                 center={[-5.397487033029457, 105.25749477039165]}
-                zoom={11}
+                zoom={13}
                 style={style}
                 scrollWheelZoom={false}>                
                 <TileLayer
