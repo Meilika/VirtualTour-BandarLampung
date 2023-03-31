@@ -6,15 +6,14 @@ import './Detail.css'
 
 const Detail = () => {
     const { slug } = useParams();
-    const [post, isLoading, vr] = useDetail(slug)
+    const [post, isLoading, vr, ket] = useDetail(slug)
     const style = { height: '400px', width: '100%' }
 
     if(isLoading) return (
         <div className="detail">
             <h1 className="detail__title title-skleton"></h1>
             <div className="detail__content">
-                <div className="content__image image-skleton">
-                </div>
+                <div className="content__image image-skleton"></div>
                 <div className="content__description">
                     <h2 className="title-skleton"></h2>
                     <p className="paragraf-skleton"></p>
@@ -37,6 +36,13 @@ const Detail = () => {
                 <div className="content__description">
                     <h2>Description</h2>
                     <p>{post.description}</p>
+                    <ul type="none" >
+                        {ket.map((info) => {
+                            return (
+                                <li>{info}</li>
+                            )
+                        })}  
+                    </ul>
                 </div>
             </div>
            {vr !== undefined ?(

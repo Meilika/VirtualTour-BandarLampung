@@ -16,8 +16,8 @@
 }
 
 .content__image{
-    height: 500px;
-    flex: 0.6;
+    flex: 0.5;
+    
 }
 
 .content__image img{
@@ -27,12 +27,16 @@
 }
 
 .content__description{
-    flex: 0.4;
+    flex: 0.5;
     text-align:justify;
 }
 
-.content__description p{    
+.content__description p, .content__description ul{    
     color: #545454;
+}
+
+.content__description ul{    
+    margin-left: -40px;
 }
 
 .content__description h2{    

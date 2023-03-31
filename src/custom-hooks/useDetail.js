@@ -8,6 +8,7 @@ export default function useDetail(slug) {
   const [post, setPost] = useState(null)
   const [isLoading, setLoading] = useState(true)
   const [vr, setVr] = useState(null)
+  const [ket, setKet] = useState(null)
 
   useEffect(() => {
     promise.then(result => {
@@ -15,8 +16,9 @@ export default function useDetail(slug) {
       setLoading(false)
       console.log(result[0].fields)
       setVr(result[0].fields.vr)
+      setKet(result[0].fields.keterangan)
     })
   }, [])
 
-  return [post, isLoading, vr]
+  return [post, isLoading, vr, ket]
 }
