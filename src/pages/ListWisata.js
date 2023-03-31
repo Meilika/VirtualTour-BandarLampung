@@ -37,7 +37,6 @@ const ListWisata = () => {
                     return (
                         <div className="list-wisata" key={post.fields.id} >
                             <img className="wisata-pic" src={post.fields.image.fields.file.url} alt={post.fields.name} />
-                            {/* <iframe className="wisata-pic" src={post.fields.vr} title="description"></iframe>  */}
                             <div className="list-desc">
                                 <div className="wisata-name" >
                                     <p>{post.fields.name}</p>
