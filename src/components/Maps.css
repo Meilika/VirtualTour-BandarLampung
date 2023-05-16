@@ -1,0 +1,9 @@
+.popup-info{
+    font-size: 12px;
+    color: grey;
+}
+
+.popup-info p {
+    margin: 0;
+    padding: 0;
+}

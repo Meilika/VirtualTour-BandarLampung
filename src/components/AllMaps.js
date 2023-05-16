@@ -4,6 +4,7 @@ import 'leaflet/dist/leaflet.css'
 import L from "leaflet";
 import { useWisata } from '../custom-hooks/'
 import { NavLink } from "react-router-dom";
+import './Maps.css';
 
 const markerIcon = new L.Icon({
     iconUrl: '/marker.png',
@@ -37,6 +38,7 @@ const AllMaps = ({ style, setInput, input }) => {
                 }).map((post) => {
                     let lat = post.fields.location.lat
                     let lon = post.fields.location.lon
+                    let ket = post.fields.mapsKet
                     return (
                         <div>
                             <Marker position={[lat, lon]} icon={markerIcon}>
@@ -45,7 +47,14 @@ const AllMaps = ({ style, setInput, input }) => {
                                         <NavLink to={`/wisata/${post.fields.slug}`}>{post.fields.name}</NavLink>
                                     </h3>
                                     <img width={80} src={post.fields.image.fields.file.url} alt={post.fields.name} />
-                                    <p><a href={post.fields.maps}>Telusuri Rute melalui Google Maps</a></p>
+                                    <div className='popup-info'>
+                                        {ket.map((info) => {
+                                            return (
+                                                <p>{info}</p>
+                                            )
+                                        })}  
+                                    </div>
+                                    <p><a href={post.fields.maps} target="_blank">Telusuri Rute melalui Google Maps</a></p>
                                 </Popup>
                             </Marker>
                         </div>

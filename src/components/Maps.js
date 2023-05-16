@@ -27,7 +27,7 @@ const Maps = ({ style, lat, lon, name, link }) => {
                 <Marker position={position} icon={markerIcon}>
                     <Popup>
                         <p>{name}</p>
-                        <a href={link}>Buka Map</a>
+                        <p><a href={link} target="_blank">Telusuri Rute melalui Google Maps</a></p>
                     </Popup>
                 </Marker>
             </MapContainer>
