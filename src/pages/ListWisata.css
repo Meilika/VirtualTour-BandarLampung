@@ -47,6 +47,19 @@
 	color: #005A8D;
 }
 
+.wisata-category {
+	margin-top: 5px;
+}
+
+.wisata-category span {
+	color: #005A8D;
+	background-color: rgba(211, 211, 211, 0.5);
+	border-radius: 5px;
+	margin: 0 5px;
+	padding: 0 5px;
+	font-size : 13px;
+}
+
 .wisata-title::after{
     content: "";
     width: 100px;

@@ -41,6 +41,9 @@ const ListWisata = () => {
                                 <div className="wisata-name" >
                                     <p>{post.fields.name}</p>
                                 </div>
+                                <div className="wisata-category" >
+                                    <span>{post.fields.category}</span>
+                                </div>
                                 <p className="wisata-desc">
                                     <TextTruncate
                                         line={4}
